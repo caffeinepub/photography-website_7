@@ -1,0 +1,98 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-single-page-react-application-with-smooth-scroll-navigation-linking-to-three-sections-homepage-hero-portfolio-and-about-me-include-a-fixed-top-navigation-bar-with-the-photographer-s-brand-name-and-anchor-links-to-each-section",
+      "featureTitle": "Create a single-page React application with smooth scroll navigation linking to three sections: Homepage (Hero), Portfolio, and About Me. Include a fixed top navigation bar with the photographer's brand name and anchor links to each section.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-full-screen-hero-section-on-the-homepage-featuring-a-large-background-photography-image-an-overlaid-headline-e-g-capturing-moments-that-last-a-lifetime-a-short-tagline-and-a-call-to-action-button-that-scrolls-to-the-portfolio-section",
+      "featureTitle": "Build a full-screen Hero section on the Homepage featuring a large background photography image, an overlaid headline (e.g., 'Capturing Moments That Last a Lifetime'), a short tagline, and a call-to-action button that scrolls to the Portfolio section.",
+      "files": [
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-portfolio-section-that-displays-a-responsive-masonry-or-grid-gallery-of-photography-sample-images-each-image-should-be-clickable-to-open-a-full-screen-lightbox-view-with-a-close-button",
+      "featureTitle": "Build a Portfolio section that displays a responsive masonry or grid gallery of photography sample images. Each image should be clickable to open a full-screen lightbox view with a close button.",
+      "files": [
+        "frontend/src/components/Lightbox.tsx",
+        "frontend/src/components/PortfolioSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-an-about-me-section-featuring-a-professional-photographer-portrait-image-a-biography-paragraph-a-list-of-specialties-or-skills-e-g-portrait-landscape-wedding-and-contact-social-media-links",
+      "featureTitle": "Build an About Me section featuring a professional photographer portrait image, a biography paragraph, a list of specialties or skills (e.g., Portrait, Landscape, Wedding), and contact/social media links.",
+      "files": [
+        "frontend/src/components/AboutSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-cohesive-dark-mode-editorial-visual-theme-across-the-entire-site-deep-charcoal-black-backgrounds-off-white-and-warm-gold-typography-generous-whitespace-elegant-serif-font-for-headings-and-clean-sans-serif-for-body-text-the-aesthetic-should-feel-high-end-and-gallery-like-consistent-with-luxury-photography-studios",
+      "featureTitle": "Apply a cohesive dark-mode editorial visual theme across the entire site: deep charcoal/black backgrounds, off-white and warm gold typography, generous whitespace, elegant serif font for headings, and clean sans-serif for body text. The aesthetic should feel high-end and gallery-like, consistent with luxury photography studios.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Professional Photography Website - Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a single-page React application with smooth scroll navigation linking to three sections: Homepage (Hero), Portfolio, and About Me. Include a fixed top navigation bar with the photographer's brand name and anchor links to each section.",
+      "acceptanceCriteria": [
+        "Navigation bar is fixed at the top and visible on all scroll positions",
+        "Nav links smoothly scroll to the Homepage/Hero, Portfolio, and About Me sections",
+        "Brand name is displayed prominently in the nav bar"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Transform App.tsx into a single-page layout with three main sections (Hero, Portfolio, About) and implement smooth scroll behavior for navigation links"
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "create",
+          "description": "Create a fixed top navigation bar component displaying the photographer's brand name 'Lens & Light' and anchor links to Hero, Portfolio, and About sections with smooth scroll behavior"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Build a full-screen Hero section on the Homepage featuring a large background photography image, an overlaid headline (e.g., 'Capturing Moments That Last a Lifetime'), a short tagline, and a call-to-action button that scrolls to the Portfolio section.",
+      "acceptanceCriteria": [
+        "Hero section fills the full viewport height",
+        "Background image is displayed with a dark overlay for text legibility",
+        "Headline and tagline text are clearly readable over the background",
+        "CTA button scrolls to the Portfolio section on click"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create a full-screen Hero section with the background image from frontend/public/assets/generated/hero-bg.dim_1920x1080.png, a dark overlay for text contrast, the headline 'Capturing Moments That Last a Lifetime', a tagline, and a CTA button that triggers smooth scroll to the Portfolio section"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build a Portfolio section that displays a responsive masonry or grid gallery of photography sample images. Each image should be clickable to open a full-screen lightbox view with a close button.",
+      "acceptanceCriteria": [
+        "Portfolio grid is responsive across mobile, tablet, and desktop breakpoints",
+        "At least 9 sample images are displayed in the grid",
+        "Clicking an image opens a lightbox modal with the full image",
+        "Lightbox can be closed via a close button or by pressing Escape"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PortfolioSection.tsx",
+          "operation": "create",
+          "description": "Create a Portfolio section with a responsive masonry grid displaying 9 portfolio images from frontend/public/assets/generated (portfolio-1.dim_800x1000.png through portfolio-9.dim_800x1000.png). Each image is clickable to open a full-screen lightbox modal"
+        },
+        {
+          "path": "frontend/src/components/Lightbox.tsx",
+          "operation": "create",
+          "description": "Create a Lightbox component that displays a full-screen image modal with a close button and support for closing via Escape key press"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Build an About Me section featuring a professional photographer portrait image, a biography paragraph, a list of specialties or skills (e.g., Portrait, Landscape, Wedding), and contact/social media links.",
+      "acceptanceCriteria": [
+        "Photographer portrait image is displayed alongside the bio text",
+        "Biography paragraph introduces the photographer professionally",
+        "At least 3 specialty tags or skill badges are shown",
+        "Contact or social links are displayed and functional"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/AboutSection.tsx",
+          "operation": "create",
+          "description": "Create an About Me section displaying the photographer portrait from frontend/public/assets/generated/photographer-portrait.dim_600x800.png, a professional biography paragraph, specialty tags (Portrait, Landscape, Wedding, etc.), and contact/social media links"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Apply a cohesive dark-mode editorial visual theme across the entire site: deep charcoal/black backgrounds, off-white and warm gold typography, generous whitespace, elegant serif font for headings, and clean sans-serif for body text. The aesthetic should feel high-end and gallery-like, consistent with luxury photography studios.",
+      "acceptanceCriteria": [
+        "All sections use the same dark charcoal/black background palette",
+        "Headings use an elegant serif typeface",
+        "Body text uses a clean sans-serif typeface",
+        "Accent colors (warm gold or off-white) are applied consistently to buttons, links, and highlights",
+        "Overall feel is minimal, spacious, and gallery-like"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global styles to apply the dark-mode editorial theme with deep charcoal/black backgrounds, off-white and warm gold accent colors, elegant serif font imports and definitions for headings, clean sans-serif for body text, and generous whitespace settings"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind configuration with custom dark theme color palette (charcoal/black backgrounds, off-white, warm gold accents), serif and sans-serif font families, and spacing utilities to support the high-end gallery aesthetic"
+        }
+      ]
+    }
+  ]
+}

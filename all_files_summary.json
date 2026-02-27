@@ -1,0 +1,20 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as a placeholder backend with no logic implemented.",
+  "feature_evidence.json": "Feature evidence report mapping each product feature (navigation, hero, portfolio, about, theme) to the source files and test IDs that implement them.",
+  "frontend-file-summaries.txt": "JSON document providing one-sentence descriptions of each frontend source file for build planning reference.",
+  "frontend/index.css": "Tailwind base stylesheet defining OKLCH CSS custom properties for light and dark color themes used throughout the app.",
+  "frontend/index.html": "Minimal HTML entry point that mounts the React app into a root div and loads the main TypeScript module.",
+  "frontend/src/App.tsx": "Root React component that composes Navigation, HeroSection, PortfolioSection, AboutSection, and Footer, tracking scroll position to pass to the nav bar.",
+  "frontend/src/components/AboutSection.tsx": "About Me section displaying a photographer portrait, stats bar, biography, specialty tags, and contact/social media links.",
+  "frontend/src/components/Footer.tsx": "Site footer with brand identity, smooth-scroll navigation links, contact info, social media icons, copyright notice, and a caffeine.ai attribution link.",
+  "frontend/src/components/HeroSection.tsx": "Full-viewport hero section with a background image, multi-layer dark overlay, serif headline, tagline, dual CTA buttons, and an animated scroll indicator.",
+  "frontend/src/components/Lightbox.tsx": "A fullscreen image lightbox modal component with keyboard navigation (arrow keys, Escape), prev/next buttons, image counter, and caption display.",
+  "frontend/src/components/Navigation.tsx": "Fixed top navigation bar with smooth-scroll links, a gold-accented brand logo, and a collapsible mobile menu toggle.",
+  "frontend/src/components/PortfolioSection.tsx": "Portfolio gallery section with category filter buttons and a CSS masonry grid of images that opens a Lightbox on click.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and caches an ICP backend actor (anonymous or authenticated) using React Query, invalidating dependent queries when the identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context provider and hook for Internet Identity authentication, managing login/logout state, identity persistence, and AuthClient lifecycle.",
+  "frontend/src/index.css": "Global CSS file that imports Google Fonts, configures Tailwind, and defines a dark editorial design-token theme with gold accents using CSS custom properties.",
+  "frontend/src/main.tsx": "Application entry point that mounts the React app wrapped with QueryClientProvider and InternetIdentityProvider.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration for the frontend, extending the default theme with custom fonts (Cormorant Garamond, Inter), OKLCH-based color tokens (including gold, sidebar, chart colors), border radii, box shadows, and keyframe animations. Enables dark mode via class, and includes typography, container-queries, and animate plugins.",
+  "project_state.json": "Tracks the current state of the professional photography website project at schema version 1.0.0, listing existing features (hero, portfolio gallery with lightbox, about me, dark editorial theme), required placeholder images with dimensions, and metadata such as known issues and architectural notes."
+}

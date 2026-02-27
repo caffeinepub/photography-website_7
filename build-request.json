@@ -1,0 +1,127 @@
+{
+  "kind": "build_request",
+  "title": "Professional Photography Website",
+  "projectName": "Lens & Light",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a single-page React application with smooth scroll navigation linking to three sections: Homepage (Hero), Portfolio, and About Me. Include a fixed top navigation bar with the photographer's brand name and anchor links to each section.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "create a professional photography website which includes a homepage, my portfolio, and about me section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation bar is fixed at the top and visible on all scroll positions",
+        "Nav links smoothly scroll to the Homepage/Hero, Portfolio, and About Me sections",
+        "Brand name is displayed prominently in the nav bar"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Build a full-screen Hero section on the Homepage featuring a large background photography image, an overlaid headline (e.g., 'Capturing Moments That Last a Lifetime'), a short tagline, and a call-to-action button that scrolls to the Portfolio section.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "homepage"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section fills the full viewport height",
+        "Background image is displayed with a dark overlay for text legibility",
+        "Headline and tagline text are clearly readable over the background",
+        "CTA button scrolls to the Portfolio section on click"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build a Portfolio section that displays a responsive masonry or grid gallery of photography sample images. Each image should be clickable to open a full-screen lightbox view with a close button.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "my portfolio"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Portfolio grid is responsive across mobile, tablet, and desktop breakpoints",
+        "At least 9 sample images are displayed in the grid",
+        "Clicking an image opens a lightbox modal with the full image",
+        "Lightbox can be closed via a close button or by pressing Escape"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Build an About Me section featuring a professional photographer portrait image, a biography paragraph, a list of specialties or skills (e.g., Portrait, Landscape, Wedding), and contact/social media links.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "about me section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Photographer portrait image is displayed alongside the bio text",
+        "Biography paragraph introduces the photographer professionally",
+        "At least 3 specialty tags or skill badges are shown",
+        "Contact or social links are displayed and functional"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Apply a cohesive dark-mode editorial visual theme across the entire site: deep charcoal/black backgrounds, off-white and warm gold typography, generous whitespace, elegant serif font for headings, and clean sans-serif for body text. The aesthetic should feel high-end and gallery-like, consistent with luxury photography studios.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All sections use the same dark charcoal/black background palette",
+        "Headings use an elegant serif typeface",
+        "Body text uses a clean sans-serif typeface",
+        "Accent colors (warm gold or off-white) are applied consistently to buttons, links, and highlights",
+        "Overall feel is minimal, spacious, and gallery-like"
+      ]
+    }
+  ],
+  "constraints": [
+    "All photography sample images used in the portfolio and hero must be served as static assets from frontend/public/assets/generated",
+    "No external CMS or backend data storage is required for this build"
+  ],
+  "nonGoals": [
+    "User authentication or login functionality",
+    "Contact form with backend email sending",
+    "Blog or editorial content management",
+    "E-commerce or print ordering functionality",
+    "Real-time features or comments"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Dramatic full-screen hero photograph: misty mountain landscape at golden hour with rich warm tones and depth (hero-bg.dim_1920x1080.png)",
+      "Portrait photograph of a professional photographer in a studio setting with soft warm lighting and dark background (photographer-portrait.dim_600x800.png)",
+      "Fine-art black and white portrait of a woman with dramatic side lighting (portfolio-1.dim_800x1000.png)",
+      "Aerial landscape photograph of rolling green hills with morning fog (portfolio-2.dim_1000x800.png)",
+      "Intimate wedding couple silhouette at sunset on a beach (portfolio-3.dim_800x1000.png)",
+      "Close-up macro photograph of a dew-covered flower petal with bokeh background (portfolio-4.dim_800x800.png)",
+      "Urban cityscape at night with light trails and neon reflections on wet pavement (portfolio-5.dim_1000x800.png)",
+      "Minimalist still life of analog film camera on a wooden surface with warm lighting (portfolio-6.dim_800x800.png)",
+      "Forest path in autumn with golden leaves and soft diffused light (portfolio-7.dim_800x1000.png)",
+      "Dramatic stormy seascape with crashing waves and moody sky (portfolio-8.dim_1000x800.png)",
+      "Candid street photography moment in a European cobblestone alley at dusk (portfolio-9.dim_800x1000.png)"
+    ],
+    "edits": []
+  }
+}

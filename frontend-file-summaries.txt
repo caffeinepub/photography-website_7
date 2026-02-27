@@ -1,0 +1,11 @@
+{
+  "frontend/src/App.tsx": "Root application component that composes the full single-page photography website with Navigation, HeroSection, PortfolioSection, AboutSection, and Footer, tracking scroll position for the nav bar.",
+  "frontend/src/components/Navigation.tsx": "Fixed top navigation bar with the \"Lens & Light\" brand, smooth-scroll anchor links to all sections, a gold-accented CTA button, and a responsive mobile hamburger menu.",
+  "frontend/src/components/HeroSection.tsx": "Full-viewport hero section with the background image, multi-layer dark overlay, serif headline, tagline, dual CTA buttons, and an animated scroll indicator.",
+  "frontend/src/components/PortfolioSection.tsx": "Portfolio section with a category filter bar and responsive CSS masonry grid of 9 photography images, each with hover overlays and click-to-lightbox functionality.",
+  "frontend/src/components/Lightbox.tsx": "Full-screen lightbox modal displaying portfolio images with keyboard navigation (Escape/Arrow keys), prev/next buttons, image counter, and caption overlay.",
+  "frontend/src/components/AboutSection.tsx": "About Me section featuring the photographer portrait with a stats bar below it (removing the conflicting `lg:right-auto`/`lg:-right-8` classes), professional biography, specialty tags, contact/social links, and a closing philosophy quote.",
+  "frontend/src/components/Footer.tsx": "Site footer with brand identity, navigation links, contact info, social media icons, copyright, and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/index.css": "Global stylesheet importing Cormorant Garamond (serif) and Inter (sans-serif) fonts, defining the dark editorial OKLCH color system, and setting base typography styles.",
+  "frontend/tailwind.config.js": "Extended Tailwind config adding Cormorant Garamond/Inter font families, site-specific semantic color tokens (site-bg, gold, muted-fg, etc.), and custom animations."
+}

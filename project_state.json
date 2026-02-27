@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Professional photography website with a homepage, portfolio section, and about me section.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Dramatic full-screen hero photograph: misty mountain landscape at golden hour with rich warm tones and depth (hero-bg.dim_1920x1080.png)\n- Portrait photograph of a professional photographer in a studio setting with soft warm lighting and dark background (photographer-portrait.dim_600x800.png)\n- Fine-art black and white portrait of a woman with dramatic side lighting (portfolio-1.dim_800x1000.png)\n- Aerial landscape photograph of rolling green hills with morning fog (portfolio-2.dim_1000x800.png)\n- Intimate wedding couple silhouette at sunset on a beach (portfolio-3.dim_800x1000.png)\n- Close-up macro photograph of a dew-covered flower petal with bokeh background (portfolio-4.dim_800x800.png)\n- Urban cityscape at night with light trails and neon reflections on wet pavement (portfolio-5.dim_1000x800.png)\n- Minimalist still life of analog film camera on a wooden surface with warm lighting (portfolio-6.dim_800x800.png)\n- Forest path in autumn with golden leaves and soft diffused light (portfolio-7.dim_800x1000.png)\n- Dramatic stormy seascape with crashing waves and moody sky (portfolio-8.dim_1000x800.png)\n- Candid street photography moment in a European cobblestone alley at dusk (portfolio-9.dim_800x1000.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-react-application-with-smooth-scroll-navigation-linking-to-three-sections-homepage-hero-portfolio-and-about-me-include-a-fixed-top-navigation-bar-with-the-photographer-s-brand-name-and-anchor-links-to-each-section",
+      "title": "Create a single-page React application with smooth scroll navigation linking to three sections: Homepage (Hero), Portfolio, and About Me. Include a fixed top navigation bar with the photographer's brand name and anchor links to each section.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-full-screen-hero-section-on-the-homepage-featuring-a-large-background-photography-image-an-overlaid-headline-e-g-capturing-moments-that-last-a-lifetime-a-short-tagline-and-a-call-to-action-button-that-scrolls-to-the-portfolio-section",
+      "title": "Build a full-screen Hero section on the Homepage featuring a large background photography image, an overlaid headline (e.g., 'Capturing Moments That Last a Lifetime'), a short tagline, and a call-to-action button that scrolls to the Portfolio section.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-portfolio-section-that-displays-a-responsive-masonry-or-grid-gallery-of-photography-sample-images-each-image-should-be-clickable-to-open-a-full-screen-lightbox-view-with-a-close-button",
+      "title": "Build a Portfolio section that displays a responsive masonry or grid gallery of photography sample images. Each image should be clickable to open a full-screen lightbox view with a close button.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-about-me-section-featuring-a-professional-photographer-portrait-image-a-biography-paragraph-a-list-of-specialties-or-skills-e-g-portrait-landscape-wedding-and-contact-social-media-links",
+      "title": "Build an About Me section featuring a professional photographer portrait image, a biography paragraph, a list of specialties or skills (e.g., Portrait, Landscape, Wedding), and contact/social media links.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-dark-mode-editorial-visual-theme-across-the-entire-site-deep-charcoal-black-backgrounds-off-white-and-warm-gold-typography-generous-whitespace-elegant-serif-font-for-headings-and-clean-sans-serif-for-body-text-the-aesthetic-should-feel-high-end-and-gallery-like-consistent-with-luxury-photography-studios",
+      "title": "Apply a cohesive dark-mode editorial visual theme across the entire site: deep charcoal/black backgrounds, off-white and warm gold typography, generous whitespace, elegant serif font for headings, and clean sans-serif for body text. The aesthetic should feel high-end and gallery-like, consistent with luxury photography studios.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Homepage with professional photography branding and hero section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Portfolio section to showcase photography work",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "About Me section with photographer bio and info",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Photography Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
