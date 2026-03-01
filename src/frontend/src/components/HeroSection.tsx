@@ -1,8 +1,8 @@
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown } from "lucide-react";
 
 function smoothScroll(id: string) {
   const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: 'smooth' });
+  if (el) el.scrollIntoView({ behavior: "smooth" });
 }
 
 export default function HeroSection() {
@@ -37,21 +37,22 @@ export default function HeroSection() {
 
         {/* Tagline */}
         <p className="text-white/70 text-base md:text-lg tracking-wide max-w-xl mx-auto mb-12 font-light">
-          Where light meets emotion — crafting timeless images that tell your story with artistry and intention.
+          Where light meets emotion — crafting timeless images that tell your
+          story with artistry and intention.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             type="button"
-            onClick={() => smoothScroll('portfolio')}
+            onClick={() => smoothScroll("portfolio")}
             className="px-10 py-4 bg-gold text-site-bg text-xs tracking-[0.25em] uppercase font-medium hover:bg-gold-light transition-all duration-300 hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-0.5"
           >
             View Portfolio
           </button>
           <button
             type="button"
-            onClick={() => smoothScroll('about')}
+            onClick={() => smoothScroll("about")}
             className="px-10 py-4 border border-white/40 text-white text-xs tracking-[0.25em] uppercase font-light hover:border-gold hover:text-gold transition-all duration-300"
           >
             About Me
@@ -62,7 +63,7 @@ export default function HeroSection() {
       {/* Scroll Indicator */}
       <button
         type="button"
-        onClick={() => smoothScroll('portfolio')}
+        onClick={() => smoothScroll("portfolio")}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 hover:text-gold transition-colors duration-300 group"
         aria-label="Scroll down"
       >

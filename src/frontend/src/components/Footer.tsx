@@ -1,13 +1,16 @@
-import { Camera } from 'lucide-react';
-import { SiInstagram, SiFacebook, SiX } from 'react-icons/si';
+import { Camera } from "lucide-react";
+import { SiFacebook, SiInstagram, SiX } from "react-icons/si";
 
-const appId = typeof window !== 'undefined' ? encodeURIComponent(window.location.hostname) : 'unknown-app';
+const appId =
+  typeof window !== "undefined"
+    ? encodeURIComponent(window.location.hostname)
+    : "unknown-app";
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -20,23 +23,29 @@ export default function Footer() {
               <span className="font-serif text-lg tracking-widest text-site-fg uppercase">
                 Lens <span className="text-gold">&</span> Light
               </span>
-              <span className="text-[10px] tracking-[0.3em] text-muted-fg uppercase mt-0.5">Photography</span>
+              <span className="text-[10px] tracking-[0.3em] text-muted-fg uppercase mt-0.5">
+                Photography
+              </span>
             </div>
             <p className="text-muted-fg text-xs leading-relaxed max-w-xs">
-              Fine art photography capturing the beauty of fleeting moments with artistry and intention.
+              Fine art photography capturing the beauty of fleeting moments with
+              artistry and intention.
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <p className="text-[10px] tracking-[0.3em] uppercase text-muted-fg mb-5">Navigation</p>
+            <p className="text-[10px] tracking-[0.3em] uppercase text-muted-fg mb-5">
+              Navigation
+            </p>
             <nav className="flex flex-col gap-3">
               {[
-                { label: 'Home', id: 'home' },
-                { label: 'Portfolio', id: 'portfolio' },
-                { label: 'About', id: 'about' },
+                { label: "Home", id: "home" },
+                { label: "Portfolio", id: "portfolio" },
+                { label: "About", id: "about" },
               ].map((link) => (
                 <button
+                  type="button"
                   key={link.id}
                   onClick={() => scrollTo(link.id)}
                   className="text-xs tracking-[0.15em] uppercase text-muted-fg hover:text-gold transition-colors text-left w-fit"
@@ -49,7 +58,9 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="text-[10px] tracking-[0.3em] uppercase text-muted-fg mb-5">Connect</p>
+            <p className="text-[10px] tracking-[0.3em] uppercase text-muted-fg mb-5">
+              Connect
+            </p>
             <div className="flex flex-col gap-3 mb-6">
               <a
                 href="mailto:hello@lensandlight.com"
@@ -57,13 +68,23 @@ export default function Footer() {
               >
                 hello@lensandlight.com
               </a>
-              <span className="text-xs tracking-[0.1em] text-muted-fg">New York City, NY</span>
+              <span className="text-xs tracking-[0.1em] text-muted-fg">
+                New York City, NY
+              </span>
             </div>
             <div className="flex gap-4">
               {[
-                { Icon: SiInstagram, href: 'https://instagram.com', label: 'Instagram' },
-                { Icon: SiFacebook, href: 'https://facebook.com', label: 'Facebook' },
-                { Icon: SiX, href: 'https://x.com', label: 'X (Twitter)' },
+                {
+                  Icon: SiInstagram,
+                  href: "https://instagram.com",
+                  label: "Instagram",
+                },
+                {
+                  Icon: SiFacebook,
+                  href: "https://facebook.com",
+                  label: "Facebook",
+                },
+                { Icon: SiX, href: "https://x.com", label: "X (Twitter)" },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
@@ -86,9 +107,7 @@ export default function Footer() {
             © {year} Lens & Light Photography. All rights reserved.
           </p>
           <p className="text-xs text-muted-fg flex items-center gap-1.5">
-            Built with{' '}
-            <Camera size={12} className="text-gold" />{' '}
-            using{' '}
+            Built with <Camera size={12} className="text-gold" /> using{" "}
             <a
               href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appId}`}
               target="_blank"

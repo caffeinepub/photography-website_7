@@ -1,21 +1,21 @@
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 interface NavigationProps {
   scrolled: boolean;
 }
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'About', href: '#about' },
+  { label: "Home", href: "#home" },
+  { label: "Portfolio", href: "#portfolio" },
+  { label: "About", href: "#about" },
 ];
 
 function smoothScroll(href: string) {
-  const id = href.replace('#', '');
+  const id = href.replace("#", "");
   const el = document.getElementById(id);
   if (el) {
-    el.scrollIntoView({ behavior: 'smooth' });
+    el.scrollIntoView({ behavior: "smooth" });
   }
 }
 
@@ -31,14 +31,15 @@ export default function Navigation({ scrolled }: NavigationProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-site-bg/95 backdrop-blur-md border-b border-gold/10 shadow-lg shadow-black/30'
-          : 'bg-transparent'
+          ? "bg-site-bg/95 backdrop-blur-md border-b border-gold/10 shadow-lg shadow-black/30"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
         {/* Brand */}
         <button
-          onClick={() => handleNav('#home')}
+          type="button"
+          onClick={() => handleNav("#home")}
           className="flex flex-col items-start group"
           aria-label="Go to home"
         >
@@ -54,6 +55,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
         <nav className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <button
+              type="button"
               key={link.href}
               onClick={() => handleNav(link.href)}
               className="text-xs tracking-[0.2em] uppercase text-muted-fg hover:text-gold transition-colors duration-300 relative group"
@@ -63,7 +65,8 @@ export default function Navigation({ scrolled }: NavigationProps) {
             </button>
           ))}
           <button
-            onClick={() => handleNav('#about')}
+            type="button"
+            onClick={() => handleNav("#about")}
             className="text-xs tracking-[0.2em] uppercase border border-gold/50 text-gold px-5 py-2 hover:bg-gold hover:text-site-bg transition-all duration-300"
           >
             Contact
@@ -72,6 +75,7 @@ export default function Navigation({ scrolled }: NavigationProps) {
 
         {/* Mobile Toggle */}
         <button
+          type="button"
           className="md:hidden text-site-fg hover:text-gold transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
@@ -83,12 +87,13 @@ export default function Navigation({ scrolled }: NavigationProps) {
       {/* Mobile Menu */}
       <div
         className={`md:hidden transition-all duration-400 overflow-hidden ${
-          mobileOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+          mobileOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
         } bg-site-bg/98 backdrop-blur-md border-b border-gold/10`}
       >
         <nav className="flex flex-col px-6 py-6 gap-6">
           {navLinks.map((link) => (
             <button
+              type="button"
               key={link.href}
               onClick={() => handleNav(link.href)}
               className="text-sm tracking-[0.2em] uppercase text-muted-fg hover:text-gold transition-colors text-left"
@@ -97,7 +102,8 @@ export default function Navigation({ scrolled }: NavigationProps) {
             </button>
           ))}
           <button
-            onClick={() => handleNav('#about')}
+            type="button"
+            onClick={() => handleNav("#about")}
             className="text-sm tracking-[0.2em] uppercase border border-gold/50 text-gold px-5 py-2 hover:bg-gold hover:text-site-bg transition-all duration-300 w-fit"
           >
             Contact

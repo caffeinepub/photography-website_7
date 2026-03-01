@@ -1,5 +1,5 @@
-import { useEffect, useCallback } from 'react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { useCallback, useEffect } from "react";
 
 interface LightboxImage {
   src: string;
@@ -14,7 +14,12 @@ interface LightboxProps {
   onNavigate: (index: number) => void;
 }
 
-export default function Lightbox({ images, currentIndex, onClose, onNavigate }: LightboxProps) {
+export default function Lightbox({
+  images,
+  currentIndex,
+  onClose,
+  onNavigate,
+}: LightboxProps) {
   const current = images[currentIndex];
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex < images.length - 1;
@@ -29,15 +34,15 @@ export default function Lightbox({ images, currentIndex, onClose, onNavigate }: 
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-      if (e.key === 'ArrowLeft') handlePrev();
-      if (e.key === 'ArrowRight') handleNext();
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "ArrowRight") handleNext();
     };
-    document.addEventListener('keydown', handleKey);
-    document.body.style.overflow = 'hidden';
+    document.addEventListener("keydown", handleKey);
+    document.body.style.overflow = "hidden";
     return () => {
-      document.removeEventListener('keydown', handleKey);
-      document.body.style.overflow = '';
+      document.removeEventListener("keydown", handleKey);
+      document.body.style.overflow = "";
     };
   }, [onClose, handlePrev, handleNext]);
 
@@ -45,9 +50,14 @@ export default function Lightbox({ images, currentIndex, onClose, onNavigate }: 
     <div
       className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center"
       onClick={onClose}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") onClose();
+      }}
+      role="presentation"
     >
       {/* Close Button */}
       <button
+        type="button"
         className="absolute top-6 right-6 z-10 w-10 h-10 flex items-center justify-center text-white/60 hover:text-gold transition-colors duration-200 border border-white/10 hover:border-gold/50"
         onClick={onClose}
         aria-label="Close lightbox"
@@ -63,8 +73,12 @@ export default function Lightbox({ images, currentIndex, onClose, onNavigate }: 
       {/* Prev Button */}
       {hasPrev && (
         <button
+          type="button"
           className="absolute left-4 md:left-8 z-10 w-12 h-12 flex items-center justify-center text-white/60 hover:text-gold transition-colors duration-200 border border-white/10 hover:border-gold/50"
-          onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+          onClick={(e) => {
+            e.stopPropagation();
+            handlePrev();
+          }}
           aria-label="Previous image"
         >
           <ChevronLeft size={22} />
@@ -74,8 +88,12 @@ export default function Lightbox({ images, currentIndex, onClose, onNavigate }: 
       {/* Next Button */}
       {hasNext && (
         <button
+          type="button"
           className="absolute right-4 md:right-8 z-10 w-12 h-12 flex items-center justify-center text-white/60 hover:text-gold transition-colors duration-200 border border-white/10 hover:border-gold/50"
-          onClick={(e) => { e.stopPropagation(); handleNext(); }}
+          onClick={(e) => {
+            e.stopPropagation();
+            handleNext();
+          }}
           aria-label="Next image"
         >
           <ChevronRight size={22} />
@@ -86,6 +104,8 @@ export default function Lightbox({ images, currentIndex, onClose, onNavigate }: 
       <div
         className="relative max-w-5xl max-h-[85vh] mx-16 flex flex-col items-center"
         onClick={(e) => e.stopPropagation()}
+        onKeyDown={(e) => e.stopPropagation()}
+        role="presentation"
       >
         <img
           src={current.src}
@@ -94,7 +114,9 @@ export default function Lightbox({ images, currentIndex, onClose, onNavigate }: 
         />
         {/* Caption */}
         <div className="mt-4 text-center">
-          <span className="text-[10px] tracking-[0.3em] uppercase text-gold mr-3">{current.category}</span>
+          <span className="text-[10px] tracking-[0.3em] uppercase text-gold mr-3">
+            {current.category}
+          </span>
           <span className="text-white/50 text-xs">{current.alt}</span>
         </div>
       </div>

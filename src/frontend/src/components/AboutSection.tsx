@@ -1,19 +1,19 @@
-import { Mail, Camera } from 'lucide-react';
-import { SiInstagram } from 'react-icons/si';
+import { Camera, Mail } from "lucide-react";
+import { SiInstagram } from "react-icons/si";
 
 const specialties = [
-  { label: 'Portrait' },
-  { label: 'Landscape' },
-  { label: 'Wedding' },
-  { label: 'Street' },
-  { label: 'Fine Art' },
-  { label: 'Commercial' },
+  { label: "Portrait" },
+  { label: "Landscape" },
+  { label: "Wedding" },
+  { label: "Street" },
+  { label: "Fine Art" },
+  { label: "Commercial" },
 ];
 
 const stats = [
-  { value: '12+', label: 'Years Experience' },
-  { value: '800+', label: 'Sessions Completed' },
-  { value: '40+', label: 'Awards Won' },
+  { value: "12+", label: "Years Experience" },
+  { value: "800+", label: "Sessions Completed" },
+  { value: "40+", label: "Awards Won" },
 ];
 
 export default function AboutSection() {
@@ -22,8 +22,12 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <p className="text-gold text-xs tracking-[0.4em] uppercase mb-4">The Artist</p>
-          <h2 className="font-serif text-4xl md:text-5xl text-site-fg mb-6">About Me</h2>
+          <p className="text-gold text-xs tracking-[0.4em] uppercase mb-4">
+            The Artist
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl text-site-fg mb-6">
+            About Me
+          </h2>
           <div className="w-16 h-px bg-gold mx-auto" />
         </div>
 
@@ -44,8 +48,12 @@ export default function AboutSection() {
             <div className="mt-6 bg-site-bg/95 backdrop-blur-sm border border-gold/10 p-6 grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
-                  <div className="font-serif text-2xl text-gold">{stat.value}</div>
-                  <div className="text-[10px] tracking-[0.15em] uppercase text-muted-fg mt-1 leading-tight">{stat.label}</div>
+                  <div className="font-serif text-2xl text-gold">
+                    {stat.value}
+                  </div>
+                  <div className="text-[10px] tracking-[0.15em] uppercase text-muted-fg mt-1 leading-tight">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </div>
@@ -53,24 +61,38 @@ export default function AboutSection() {
 
           {/* Bio */}
           <div className="flex flex-col justify-center">
-            <h3 className="font-serif text-3xl md:text-4xl text-site-fg mb-2">Alexandra Voss</h3>
-            <p className="text-gold text-xs tracking-[0.3em] uppercase mb-8">Fine Art Photographer · New York</p>
+            <h3 className="font-serif text-3xl md:text-4xl text-site-fg mb-2">
+              Alexandra Voss
+            </h3>
+            <p className="text-gold text-xs tracking-[0.3em] uppercase mb-8">
+              Fine Art Photographer · New York
+            </p>
 
             <div className="space-y-5 text-muted-fg text-sm leading-relaxed mb-10">
               <p>
-                I am a fine art photographer based in New York City, dedicated to capturing the quiet poetry hidden in everyday moments. With over a decade behind the lens, I've developed a visual language that blends technical precision with raw emotional honesty.
+                I am a fine art photographer based in New York City, dedicated
+                to capturing the quiet poetry hidden in everyday moments. With
+                over a decade behind the lens, I've developed a visual language
+                that blends technical precision with raw emotional honesty.
               </p>
               <p>
-                My work spans intimate portraiture, sweeping landscapes, and documentary wedding photography — each project approached with the same reverence for light, composition, and authentic human connection.
+                My work spans intimate portraiture, sweeping landscapes, and
+                documentary wedding photography — each project approached with
+                the same reverence for light, composition, and authentic human
+                connection.
               </p>
               <p>
-                I believe every photograph is a collaboration between the photographer and the world. My role is simply to be present, patient, and ready when the light is perfect.
+                I believe every photograph is a collaboration between the
+                photographer and the world. My role is simply to be present,
+                patient, and ready when the light is perfect.
               </p>
             </div>
 
             {/* Specialties */}
             <div className="mb-10">
-              <p className="text-[10px] tracking-[0.3em] uppercase text-muted-fg mb-4">Specialties</p>
+              <p className="text-[10px] tracking-[0.3em] uppercase text-muted-fg mb-4">
+                Specialties
+              </p>
               <div className="flex flex-wrap gap-2">
                 {specialties.map((spec) => (
                   <span
@@ -102,28 +124,34 @@ export default function AboutSection() {
                 <SiInstagram size={14} />
                 Instagram
               </a>
-              <a
-                href="#portfolio"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+              <button
+                type="button"
+                onClick={() => {
+                  document
+                    .getElementById("portfolio")
+                    ?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-muted-fg hover:text-gold transition-colors duration-300"
               >
                 <Camera size={14} />
                 View Work
-              </a>
+              </button>
             </div>
           </div>
         </div>
 
         {/* Philosophy Quote */}
         <div className="border-t border-site-border pt-16 text-center max-w-2xl mx-auto">
-          <div className="text-gold text-4xl font-serif mb-4 leading-none">"</div>
+          <div className="text-gold text-4xl font-serif mb-4 leading-none">
+            "
+          </div>
           <blockquote className="font-serif text-xl md:text-2xl text-site-fg/80 italic leading-relaxed mb-6">
-            Photography is the art of frozen time — the ability to store emotion and feelings within a frame.
+            Photography is the art of frozen time — the ability to store emotion
+            and feelings within a frame.
           </blockquote>
-          <cite className="text-xs tracking-[0.3em] uppercase text-muted-fg not-italic">— Alexandra Voss</cite>
+          <cite className="text-xs tracking-[0.3em] uppercase text-muted-fg not-italic">
+            — Alexandra Voss
+          </cite>
         </div>
       </div>
     </section>

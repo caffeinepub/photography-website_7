@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,34 +9,34 @@
     --radius: 0rem;
 
     /* Dark editorial theme — deep charcoal/black */
-    --background:        0.10 0 0;       /* near-black #1a1a1a */
-    --foreground:        0.93 0.005 90;  /* warm off-white */
-    --card:              0.13 0 0;
-    --card-foreground:   0.93 0.005 90;
-    --popover:           0.15 0 0;
-    --popover-foreground:0.93 0.005 90;
-    --primary:           0.78 0.12 85;   /* warm gold */
-    --primary-foreground:0.10 0 0;
-    --secondary:         0.16 0 0;
+    --background: 0.1 0 0; /* near-black #1a1a1a */
+    --foreground: 0.93 0.005 90; /* warm off-white */
+    --card: 0.13 0 0;
+    --card-foreground: 0.93 0.005 90;
+    --popover: 0.15 0 0;
+    --popover-foreground: 0.93 0.005 90;
+    --primary: 0.78 0.12 85; /* warm gold */
+    --primary-foreground: 0.1 0 0;
+    --secondary: 0.16 0 0;
     --secondary-foreground: 0.93 0.005 90;
-    --muted:             0.16 0 0;
-    --muted-foreground:  0.55 0.005 90;
-    --accent:            0.78 0.12 85;
-    --accent-foreground: 0.10 0 0;
-    --destructive:       0.577 0.245 27.325;
+    --muted: 0.16 0 0;
+    --muted-foreground: 0.55 0.005 90;
+    --accent: 0.78 0.12 85;
+    --accent-foreground: 0.1 0 0;
+    --destructive: 0.577 0.245 27.325;
     --destructive-foreground: 0.985 0 0;
-    --border:            0.22 0 0;
-    --input:             0.22 0 0;
-    --ring:              0.78 0.12 85;
+    --border: 0.22 0 0;
+    --input: 0.22 0 0;
+    --ring: 0.78 0.12 85;
 
     /* Site-specific tokens */
-    --site-bg:           0.10 0 0;
-    --site-surface:      0.13 0 0;
-    --site-fg:           0.93 0.005 90;
-    --site-border:       0.22 0 0;
-    --muted-fg:          0.55 0.005 90;
-    --gold:              0.78 0.12 85;
-    --gold-light:        0.85 0.10 88;
+    --site-bg: 0.1 0 0;
+    --site-surface: 0.13 0 0;
+    --site-fg: 0.93 0.005 90;
+    --site-border: 0.22 0 0;
+    --muted-fg: 0.55 0.005 90;
+    --gold: 0.78 0.12 85;
+    --gold-light: 0.85 0.1 88;
 
     --chart-1: 0.646 0.222 41.116;
     --chart-2: 0.6 0.118 184.704;
@@ -46,7 +46,7 @@
     --sidebar: 0.13 0 0;
     --sidebar-foreground: 0.93 0.005 90;
     --sidebar-primary: 0.78 0.12 85;
-    --sidebar-primary-foreground: 0.10 0 0;
+    --sidebar-primary-foreground: 0.1 0 0;
     --sidebar-accent: 0.16 0 0;
     --sidebar-accent-foreground: 0.93 0.005 90;
     --sidebar-border: 0.22 0 0;
@@ -66,20 +66,25 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Cormorant Garamond", Georgia, serif;
   }
 }
 
 @layer utilities {
   .font-serif {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: "Cormorant Garamond", Georgia, serif;
   }
 
   .animate-fade-in {
@@ -88,6 +93,12 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

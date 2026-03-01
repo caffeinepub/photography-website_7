@@ -1,39 +1,92 @@
-import { useState } from 'react';
-import Lightbox from './Lightbox';
+import { useState } from "react";
+import Lightbox from "./Lightbox";
 
 interface PortfolioImage {
   src: string;
   alt: string;
   category: string;
-  aspect: 'portrait' | 'landscape' | 'square';
+  aspect: "portrait" | "landscape" | "square";
 }
 
 const portfolioImages: PortfolioImage[] = [
-  { src: '/assets/generated/portfolio-1.dim_800x1000.png', alt: 'Fine art portrait with dramatic lighting', category: 'Portrait', aspect: 'portrait' },
-  { src: '/assets/generated/portfolio-2.dim_1000x800.png', alt: 'Aerial landscape with morning fog', category: 'Landscape', aspect: 'landscape' },
-  { src: '/assets/generated/portfolio-3.dim_800x1000.png', alt: 'Wedding couple silhouette at sunset', category: 'Wedding', aspect: 'portrait' },
-  { src: '/assets/generated/portfolio-4.dim_800x800.png', alt: 'Macro flower petal with bokeh', category: 'Macro', aspect: 'square' },
-  { src: '/assets/generated/portfolio-5.dim_1000x800.png', alt: 'Urban cityscape at night', category: 'Urban', aspect: 'landscape' },
-  { src: '/assets/generated/portfolio-6.dim_800x800.png', alt: 'Analog film camera still life', category: 'Still Life', aspect: 'square' },
-  { src: '/assets/generated/portfolio-7.dim_800x1000.png', alt: 'Autumn forest path', category: 'Landscape', aspect: 'portrait' },
-  { src: '/assets/generated/portfolio-8.dim_1000x800.png', alt: 'Dramatic stormy seascape', category: 'Seascape', aspect: 'landscape' },
-  { src: '/assets/generated/portfolio-9.dim_800x1000.png', alt: 'Street photography in European alley', category: 'Street', aspect: 'portrait' },
+  {
+    src: "/assets/generated/portfolio-1.dim_800x1000.png",
+    alt: "Fine art portrait with dramatic lighting",
+    category: "Portrait",
+    aspect: "portrait",
+  },
+  {
+    src: "/assets/generated/portfolio-2.dim_1000x800.png",
+    alt: "Aerial landscape with morning fog",
+    category: "Landscape",
+    aspect: "landscape",
+  },
+  {
+    src: "/assets/generated/portfolio-3.dim_800x1000.png",
+    alt: "Wedding couple silhouette at sunset",
+    category: "Wedding",
+    aspect: "portrait",
+  },
+  {
+    src: "/assets/generated/portfolio-4.dim_800x800.png",
+    alt: "Macro flower petal with bokeh",
+    category: "Macro",
+    aspect: "square",
+  },
+  {
+    src: "/assets/generated/portfolio-5.dim_1000x800.png",
+    alt: "Urban cityscape at night",
+    category: "Urban",
+    aspect: "landscape",
+  },
+  {
+    src: "/assets/generated/portfolio-6.dim_800x800.png",
+    alt: "Analog film camera still life",
+    category: "Still Life",
+    aspect: "square",
+  },
+  {
+    src: "/assets/generated/portfolio-7.dim_800x1000.png",
+    alt: "Autumn forest path",
+    category: "Landscape",
+    aspect: "portrait",
+  },
+  {
+    src: "/assets/generated/portfolio-8.dim_1000x800.png",
+    alt: "Dramatic stormy seascape",
+    category: "Seascape",
+    aspect: "landscape",
+  },
+  {
+    src: "/assets/generated/portfolio-9.dim_800x1000.png",
+    alt: "Street photography in European alley",
+    category: "Street",
+    aspect: "portrait",
+  },
 ];
 
-const categories = ['All', 'Portrait', 'Landscape', 'Wedding', 'Urban', 'Street'];
+const categories = [
+  "All",
+  "Portrait",
+  "Landscape",
+  "Wedding",
+  "Urban",
+  "Street",
+];
 
 export default function PortfolioSection() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState("All");
 
-  const filtered = activeCategory === 'All'
-    ? portfolioImages
-    : portfolioImages.filter(img => img.category === activeCategory);
+  const filtered =
+    activeCategory === "All"
+      ? portfolioImages
+      : portfolioImages.filter((img) => img.category === activeCategory);
 
   const handleImageClick = (filteredIndex: number) => {
     // Find the actual index in the full array for lightbox navigation
     const img = filtered[filteredIndex];
-    const fullIndex = portfolioImages.findIndex(p => p.src === img.src);
+    const fullIndex = portfolioImages.findIndex((p) => p.src === img.src);
     setLightboxIndex(fullIndex);
   };
 
@@ -42,11 +95,16 @@ export default function PortfolioSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-gold text-xs tracking-[0.4em] uppercase mb-4">Selected Works</p>
-          <h2 className="font-serif text-4xl md:text-5xl text-site-fg mb-6">Portfolio</h2>
+          <p className="text-gold text-xs tracking-[0.4em] uppercase mb-4">
+            Selected Works
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl text-site-fg mb-6">
+            Portfolio
+          </h2>
           <div className="w-16 h-px bg-gold mx-auto mb-8" />
           <p className="text-muted-fg text-sm tracking-wide max-w-md mx-auto leading-relaxed">
-            A curated collection of moments frozen in time — each image a story waiting to be told.
+            A curated collection of moments frozen in time — each image a story
+            waiting to be told.
           </p>
         </div>
 
@@ -54,12 +112,13 @@ export default function PortfolioSection() {
         <div className="flex flex-wrap justify-center gap-3 mb-14">
           {categories.map((cat) => (
             <button
+              type="button"
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`text-xs tracking-[0.2em] uppercase px-5 py-2 transition-all duration-300 ${
                 activeCategory === cat
-                  ? 'bg-gold text-site-bg'
-                  : 'border border-site-border text-muted-fg hover:border-gold hover:text-gold'
+                  ? "bg-gold text-site-bg"
+                  : "border border-site-border text-muted-fg hover:border-gold hover:text-gold"
               }`}
             >
               {cat}
@@ -70,10 +129,12 @@ export default function PortfolioSection() {
         {/* Masonry Grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
           {filtered.map((image, idx) => (
-            <div
+            <button
+              type="button"
               key={image.src}
-              className="break-inside-avoid group relative overflow-hidden cursor-pointer"
+              className="break-inside-avoid group relative overflow-hidden cursor-pointer w-full text-left"
               onClick={() => handleImageClick(idx)}
+              aria-label={image.alt}
             >
               <img
                 src={image.src}
@@ -92,11 +153,25 @@ export default function PortfolioSection() {
               </div>
               {/* Expand icon */}
               <div className="absolute top-4 right-4 w-8 h-8 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-white">
-                  <path d="M1 1h5M1 1v5M13 13H8M13 13V8M13 1H8M13 1V6M1 13h5M1 13V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  className="text-white"
+                  aria-hidden="true"
+                  role="img"
+                >
+                  <title>Expand</title>
+                  <path
+                    d="M1 1h5M1 1v5M13 13H8M13 13V8M13 1H8M13 1V6M1 13h5M1 13V8"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                  />
                 </svg>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>
